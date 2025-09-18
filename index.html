@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jean-Paul Stube – Italienische Küche neu inszeniert</title>
+    <meta
+      name="description"
+      content="Entdecken Sie die neu gestaltete Jean-Paul Stube – eine moderne Hommage an traditionelle italienische Küche in Wunsiedel."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="header" id="top">
+      <div class="topbar">
+        <span class="topbar__item">Ludwigstraße 70 · 95632 Wunsiedel</span>
+        <a class="topbar__item" href="tel:+4992326163">Reservierungen: 09232 / 6163</a>
+        <span class="topbar__item">Mo–Sa 11:30–22:00 · So 17:00–22:00</span>
+      </div>
+      <div class="container">
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a class="nav__brand" href="#top" aria-label="Jean-Paul Stube Startseite">Jean-Paul Stube</a>
+          <button class="nav__toggle" aria-expanded="false" aria-controls="primary-menu">
+            <span class="sr-only">Menü öffnen</span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav__list" id="primary-menu">
+            <li><a href="#story">Philosophie</a></li>
+            <li><a href="#menu">Signature Dishes</a></li>
+            <li><a href="#experience">Erlebnis</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+          <a class="nav__cta" href="tel:+4992326163">Jetzt reservieren</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+          <p class="hero__eyebrow">Seit 34 Jahren in Wunsiedel</p>
+          <h1>Ein kulinarischer Salon für italienische Lebensfreude</h1>
+          <p>
+            Die Jean-Paul Stube verbindet familiäre Atmosphäre mit zeitgemäßem Design. Wir servieren handgefertigte
+            Pasta, holzgefeuerte Pizzen und mediterrane Klassiker – begleitet von ausgesuchten Weinen.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="tel:+4992326163">Tisch reservieren</a>
+            <a class="button button--ghost" href="#menu">Speisekarte entdecken</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="story">
+        <div class="container section__grid">
+          <div class="section__content">
+            <h2>Tradition trifft auf zeitgenössische Eleganz</h2>
+            <p>
+              Unsere Geschichte begann als kleine Familienpizzeria – heute interpretiert Küchenchef Giovanni Amato die
+              Klassiker Italiens mit feinsinnigem Gespür für regionale Produkte. Jede Sauce, jeder Teig entsteht in
+              liebevoller Handarbeit, inspiriert von den Jahreszeiten des Fichtelgebirges und den Märkten Italiens.
+            </p>
+            <p>
+              Im neuen Ambiente schaffen warme Naturmaterialien, sanfte Farbwelten und ausgewählte Musik die Bühne für
+              unvergessliche Abende – von romantischen Dinnern bis zu lebhaften Familienfeiern.
+            </p>
+            <div class="section__stats">
+              <div>
+                <span class="section__stat-value">34</span>
+                <span class="section__stat-label">Jahre Gastfreundschaft</span>
+              </div>
+              <div>
+                <span class="section__stat-value">12</span>
+                <span class="section__stat-label">regionale Lieferanten</span>
+              </div>
+              <div>
+                <span class="section__stat-value">86</span>
+                <span class="section__stat-label">Weine in der Vinothek</span>
+              </div>
+            </div>
+          </div>
+          <div class="section__visual">
+            <figure class="story-card">
+              <img src="https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=900&q=80" alt="Holzfeuerofen mit Pizza" />
+              <figcaption>Holzofen-Pizza – knusprig, rauchig, unverkennbar Jean-Paul.</figcaption>
+            </figure>
+            <figure class="story-card story-card--offset">
+              <img src="https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?auto=format&fit=crop&w=900&q=80" alt="Italienische Pasta" />
+              <figcaption>Frische Pasta, täglich hausgemacht.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tinted" id="menu">
+        <div class="container">
+          <div class="section__header">
+            <h2>Signature Dishes</h2>
+            <p>Eine kuratierte Auswahl aus unserer Karte – saisonal, elegant, charaktervoll.</p>
+          </div>
+          <div class="card-grid">
+            <article class="menu-card">
+              <div class="menu-card__badge">Neu interpretiert</div>
+              <h3>Pizza "Jean-Paul"</h3>
+              <p>
+                San-Marzano-Tomaten, Büffelmozzarella, confierte Datteltomaten und Basilikumpesto – vollendet im
+                Steinofen.
+              </p>
+              <span class="menu-card__price">€ 14,50</span>
+            </article>
+            <article class="menu-card">
+              <h3>Pasta al Tartufo</h3>
+              <p>
+                Hausgemachte Tagliatelle mit schwarzem Trüffel, cremiger Parmigiano-Reggiano-Sauce und einem Hauch
+                Zitronenabrieb.
+              </p>
+              <span class="menu-card__price">€ 18,00</span>
+            </article>
+            <article class="menu-card">
+              <h3>Risotto Rosso</h3>
+              <p>
+                Carnaroli-Reis in Barolo geschwenkt, mit geschmorten Schalotten, gerösteten Haselnüssen und Taleggio.
+              </p>
+              <span class="menu-card__price">€ 17,50</span>
+            </article>
+            <article class="menu-card">
+              <h3>Seafood Aperitivo</h3>
+              <p>
+                Auswahl an marinierten Meeresfrüchten, Amalfi-Zitronen, Fenchel und sizilianischem Olivenöl – perfekt zum
+                Teilen.
+              </p>
+              <span class="menu-card__price">€ 16,00</span>
+            </article>
+          </div>
+          <div class="menu-note">
+            <p>
+              <strong>Für Allergiker und besondere Wünsche:</strong> Unser Serviceteam berät Sie gerne persönlich und stellt
+              individuelle Menüfolgen zusammen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container section__grid section__grid--reverse">
+          <div class="section__content">
+            <h2>Ein sinnliches Erlebnis</h2>
+            <p>
+              Von der ersten Begrüßung bis zum Espresso begleitet Sie unser Team aufmerksam und unaufdringlich. Die neue
+              Inneneinrichtung setzt auf weiche Polster, dezente Beleuchtung und eine offene Sicht auf den Holzofen – ein
+              Ambiente, das zum Verweilen einlädt.
+            </p>
+            <ul class="feature-list">
+              <li>Vinothek mit handverlesenen italienischen Winzerweinen</li>
+              <li>Intimer Chef's Table für bis zu sechs Personen</li>
+              <li>Saisonal wechselnde Degustationsmenüs mit Weinbegleitung</li>
+              <li>Sommerterrasse im ruhigen Innenhof</li>
+            </ul>
+            <a class="button button--ghost" href="#events">Private Dining anfragen</a>
+          </div>
+          <div class="section__visual">
+            <div class="moodboard">
+              <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80" alt="Eleganter Restaurantbereich" />
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Weinregal im Restaurant" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="events">
+        <div class="container section__grid">
+          <div class="section__content section__content--light">
+            <h2>Events & Private Dining</h2>
+            <p>
+              Ob Hochzeit, Geburtstagsdinner oder Firmenempfang – wir gestalten Momente, die in Erinnerung bleiben. Unser
+              Team entwirft individuelle Menüs, stimmige Dekorationen und begleitet Sie von der ersten Idee bis zum
+              letzten Espresso.
+            </p>
+            <div class="highlight-list">
+              <div>
+                <h3>Salone Jean-Paul</h3>
+                <p>Eleganter Raum für bis zu 40 Gäste mit eigener Bar und Musiksystem.</p>
+              </div>
+              <div>
+                <h3>Chef's Table</h3>
+                <p>Exklusives Menü direkt am Pass – ideal für kulinarische Entdeckungsreisen.</p>
+              </div>
+              <div>
+                <h3>Catering</h3>
+                <p>Von Antipasti-Platten bis zum kompletten Menü – wir bringen Italien zu Ihnen.</p>
+              </div>
+            </div>
+            <a class="button button--primary" href="mailto:info@pizzeria-jean-paul-stube.de">Event anfragen</a>
+          </div>
+          <div class="section__visual">
+            <div class="events-card">
+              <p class="events-card__quote">
+                "Die Jean-Paul Stube hat unsere Hochzeitsfeier perfekt begleitet – vom Aperitivo bis zur Mitternachtspasta."
+              </p>
+              <p class="events-card__author">– Familie Schneider</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tinted">
+        <div class="container testimonials">
+          <div class="testimonial">
+            <p class="testimonial__text">
+              "Jeder Gang eine Überraschung – elegant präsentiert und voller Geschmack. Die neue Jean-Paul Stube ist ein
+              Erlebnis!"
+            </p>
+            <p class="testimonial__author">Anna L., Stammgast</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__text">
+              "Aufmerksamer Service, fantastische Weinkarte und eine Atmosphäre wie in einer italienischen Stadtvilla."
+            </p>
+            <p class="testimonial__author">Marco R., Weinliebhaber</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__text">
+              "Auch unser vegetarischer Tisch war begeistert – kreative Küche, die jeden mitnimmt."
+            </p>
+            <p class="testimonial__author">Sophie M., Eventgast</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section newsletter">
+        <div class="container newsletter__content">
+          <div>
+            <h2>Newsletter & Degustationen</h2>
+            <p>
+              Erhalten Sie Einladungen zu Weinabenden, saisonalen Menüs und exklusiven Tastings bevor alle anderen.
+            </p>
+          </div>
+          <form class="newsletter__form">
+            <label for="newsletter-email" class="sr-only">E-Mail-Adresse</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="E-Mail-Adresse" required />
+            <button type="submit" class="button button--primary">Anmelden</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section section--map" id="contact">
+        <div class="container section__grid">
+          <div class="section__content">
+            <h2>Besuchen Sie uns</h2>
+            <p>
+              Jean-Paul-Stube G. Amato<br />
+              Ludwigstraße 70<br />
+              95632 Wunsiedel
+            </p>
+            <p>Telefon: <a href="tel:+4992326163">09232 / 6163</a><br />E-Mail: <a href="mailto:info@pizzeria-jean-paul-stube.de">info@pizzeria-jean-paul-stube.de</a></p>
+            <p>
+              <strong>Öffnungszeiten</strong><br />
+              Montag – Samstag: 11:30 – 22:00 Uhr<br />
+              Sonntag: 17:00 – 22:00 Uhr
+            </p>
+            <div class="contact-actions">
+              <a class="button button--ghost" href="https://goo.gl/maps/1m6iPx5y5sv">Route planen</a>
+              <a class="button button--primary" href="tel:+4992326163">Jetzt anrufen</a>
+            </div>
+          </div>
+          <div class="section__visual">
+            <iframe
+              title="Jean-Paul Stube Standort"
+              loading="lazy"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.271079252809!2d12.00496037710914!3d50.04158547151636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0e36d470fe75f%3A0x31a8bbfacce6be10!2sJean%20Paul%20Stube!5e0!3m2!1sde!2sde!4v1700000000000"
+              allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="footer__brand" href="#top">Jean-Paul Stube</a>
+          <p>
+            Eine moderne Bühne für traditionelle italienische Küche – mit Liebe zum Detail gestaltet und mit Herz
+            geführt.
+          </p>
+        </div>
+        <div>
+          <h3>Kontakt</h3>
+          <ul>
+            <li><a href="tel:+4992326163">Telefon 09232 / 6163</a></li>
+            <li><a href="mailto:info@pizzeria-jean-paul-stube.de">info@pizzeria-jean-paul-stube.de</a></li>
+            <li>Ludwigstraße 70, 95632 Wunsiedel</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Folgen Sie uns</h3>
+          <ul class="footer__social">
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tripadvisor.com" target="_blank" rel="noopener">Tripadvisor</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <div class="container">
+          <p>© <span id="year"></span> Jean-Paul Stube. Alle Rechte vorbehalten.</p>
+          <div class="footer__links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>
