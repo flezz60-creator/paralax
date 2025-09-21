@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datenschutzerklärung – Tech Teddy</title>
+    <meta name="description" content="Informationen zum Datenschutz auf tech-teddy.de." />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="canonical" href="https://tech-teddy.de/datenschutz/" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="../">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="logo" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#1d4ed8" />
+                <stop offset="1" stop-color="#60a5fa" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#logo)" />
+            <path
+              d="M24 20a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4h4a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4h-4v4a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4v-4h-4a4 4 0 0 1-4-4V28a4 4 0 0 1 4-4h4zm4 6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2z"
+              fill="#f8fafc"
+            />
+          </svg>
+          <span>Tech Teddy</span>
+        </a>
+        <nav aria-label="Hauptnavigation">
+          <ul>
+            <li><a href="../">Start</a></li>
+            <li><a href="../a-z/">Tools A–Z</a></li>
+            <li><a href="../wissen/">Wissen</a></li>
+            <li><a href="../quiz/allgemeinwissen/">Quiz</a></li>
+            <li><a href="../impressum/">Impressum</a></li>
+            <li><a href="../datenschutz/" aria-current="page">Datenschutz</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="theme-toggle" data-theme-toggle>🌙 Dunkelmodus</button>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <h1>Datenschutzerklärung</h1>
+      <p>Der Schutz deiner Daten hat Priorität. Diese Website kommt ohne Tracking-Skripte oder externe Login-Dienste aus.</p>
+      <section class="section-alt">
+        <h2>Grundlagen</h2>
+        <p>
+          Verantwortlich für die Datenverarbeitung ist Tech Teddy Tools, Musterstraße 12, 10115 Berlin. Bei Fragen erreichst du uns unter
+          <a href="mailto:datenschutz@tech-teddy.de">datenschutz@tech-teddy.de</a>.
+        </p>
+      </section>
+      <section class="section-alt">
+        <h2>Server-Logs</h2>
+        <p>
+          Beim Aufruf unserer Seiten werden automatisch Informationen erfasst, die dein Browser übermittelt (z. B. IP-Adresse, Datum, Uhrzeit,
+          abgerufene Datei). Diese Daten dienen der Sicherstellung eines störungsfreien Betriebs und werden spätestens nach 14 Tagen gelöscht.
+        </p>
+      </section>
+      <section class="section-alt">
+        <h2>Cookies & Speicher</h2>
+        <p>
+          Die Tools speichern Eingaben optional im LocalStorage deines Browsers, damit du Berechnungen später fortsetzen kannst. Die Daten bleiben auf
+          deinem Gerät und werden nicht an uns übermittelt.
+        </p>
+      </section>
+      <section class="section-alt">
+        <h2>Analyse</h2>
+        <p>
+          Für die MVP-Version kommt keine Webanalyse zum Einsatz. Sobald Google Analytics oder Plausible eingebunden werden, erscheint ein Consent
+          Banner und diese Erklärung wird aktualisiert.
+        </p>
+      </section>
+      <section class="section-alt">
+        <h2>Kontakt</h2>
+        <p>Bei Fragen wende dich gerne an <a href="mailto:datenschutz@tech-teddy.de">datenschutz@tech-teddy.de</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="../">Startseite</a>
+          <a href="../a-z/">Tools A–Z</a>
+          <a href="../wissen/">Wissen</a>
+          <a href="../quiz/allgemeinwissen/">Quiz</a>
+          <a href="../impressum/">Impressum</a>
+          <a href="../datenschutz/">Datenschutz</a>
+        </div>
+        <div class="footer-meta">© <span id="year"></span> Tech Teddy – Tools made in Germany.</div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import { setupThemeToggle } from '../assets/js/utils.js';
+      const themeToggle = document.querySelector('[data-theme-toggle]');
+      setupThemeToggle(themeToggle);
+      const yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
