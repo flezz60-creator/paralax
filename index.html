@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tech Teddy – Sofort-Rechner & Tools für den Alltag</title>
+    <meta
+      name="description"
+      content="Kostenlose Online-Rechner & Generatoren für Schule, Büro, Alltag und Finanzen. Alle Tools funktionieren ohne Installation direkt im Browser."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="canonical" href="https://tech-teddy.de/" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="./">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="logo" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#1d4ed8" />
+                <stop offset="1" stop-color="#60a5fa" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#logo)" />
+            <path
+              d="M24 20a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4h4a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4h-4v4a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4v-4h-4a4 4 0 0 1-4-4V28a4 4 0 0 1 4-4h4zm4 6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2z"
+              fill="#f8fafc"
+            />
+          </svg>
+          <span>Tech Teddy</span>
+        </a>
+        <nav aria-label="Hauptnavigation">
+          <ul>
+            <li><a href="./">Start</a></li>
+            <li><a href="./a-z/">Tools A–Z</a></li>
+            <li><a href="./wissen/">Wissen</a></li>
+            <li><a href="./quiz/allgemeinwissen/">Quiz</a></li>
+            <li><a href="./impressum/">Impressum</a></li>
+            <li><a href="./datenschutz/">Datenschutz</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="theme-toggle" data-theme-toggle>🌙 Dunkelmodus</button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <div>
+          <div class="hero-badges">
+            <span class="hero-badge">🧮 40+ Online-Tools</span>
+            <span class="hero-badge">⚡ Ergebnis in Sekunden</span>
+            <span class="hero-badge">🌙 Hell &amp; Dunkel</span>
+          </div>
+          <h1>Tools, die deinen Alltag leichter machen</h1>
+          <p>
+            Berechne Rabatte, plane dein Gehalt, kontrolliere deine Fitness oder wandel Einheiten blitzschnell um.
+            Tech Teddy liefert dir verlässliche Ergebnisse – optimiert für Laptop, Tablet und Smartphone.
+          </p>
+          <ul class="hero-list">
+            <li><span class="icon" aria-hidden="true">✅</span><span>Live-Ergebnisse ohne Seiten-Reload</span></li>
+            <li><span class="icon" aria-hidden="true">📚</span><span>Beispiele, FAQs und Quellen sorgen für Kontext</span></li>
+            <li><span class="icon" aria-hidden="true">🔗</span><span>Teile deine Einstellungen bequem per Link</span></li>
+          </ul>
+          <div class="cta hero-badges">
+            <a class="btn btn-primary" href="./tools/prozentrechner/">Prozentrechner starten</a>
+            <a class="btn btn-secondary" href="#cluster">Alle Tools entdecken</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="./images/hero.svg" alt="Illustration von Tools" />
+        </div>
+      </section>
+
+      <section class="section" id="cluster">
+        <div class="section-header">
+          <h2>Finde dein Tool</h2>
+          <p>Durchstöbere mehr als 40 Rechner, Konverter und Generatoren. Filtere nach Kategorien oder nutze die Suche, um direkt loszulegen.</p>
+        </div>
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-3.5-3.5"></path>
+          </svg>
+          <input type="search" placeholder="Tool suchen…" aria-label="Tools durchsuchen" data-tool-search />
+        </div>
+        <div class="tool-sharing" data-cluster-tabs></div>
+        <div class="card-grid" data-tool-grid></div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="section-header">
+          <h2>Mehrwert auf einen Blick</h2>
+          <p>Von Alltag bis Beruf: Tech Teddy verbindet verständliche Erklärungen mit präzisen Ergebnissen.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">💶</span>
+            <h3>Finanzen &amp; Planung</h3>
+            <p>Rechne Rabatte, Netto-Gehälter oder Zinseszinsen in Sekunden nach und halte deine Budgets unter Kontrolle.</p>
+            <a class="feature-link" href="./tools/brutto-netto/">Zum Brutto-Netto-Rechner</a>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🧘</span>
+            <h3>Gesundheit &amp; Wohlbefinden</h3>
+            <p>Behalte BMI, Kalorienverbrauch oder dein Trainingspensum im Blick – inklusive Kategorien, Tipps und FAQ.</p>
+            <a class="feature-link" href="./tools/bmi/">BMI-Rechner öffnen</a>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🛠️</span>
+            <h3>Kreativ &amp; Produktiv</h3>
+            <p>Nutze Text-Generatoren, Formatierer, QR-Codes oder JSON-Helfer für Projekte, Schule und Marketing.</p>
+            <a class="feature-link" href="./tools/json-formatter/">Zum JSON-Formatter</a>
+          </article>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <strong>40+</strong>
+            <span>Tools &amp; Wissensartikel</span>
+          </div>
+          <div class="stat-card">
+            <strong>&lt; 2&nbsp;s</strong>
+            <span>Sofort sichtbare Ergebnisse</span>
+          </div>
+          <div class="stat-card">
+            <strong>de-DE</strong>
+            <span>Optimiert für den DACH-Raum</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Direkt einsteigen</h2>
+          <p>Die meistgenutzten Rechner und Guides bringen dich mit wenigen Klicks ans Ziel.</p>
+        </div>
+        <div class="section-columns">
+          <div>
+            <h3>Top-Rechner</h3>
+            <ul class="link-list">
+              <li>
+                <a href="./tools/prozentrechner/">
+                  <span class="icon" aria-hidden="true">📈</span>
+                  <div>
+                    <strong>Prozentrechner</strong>
+                    <small>Rabatte, Mehrwertsteuer &amp; Zuschläge schnell vergleichen.</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./tools/zinseszins/">
+                  <span class="icon" aria-hidden="true">💹</span>
+                  <div>
+                    <strong>Zinseszins-Rechner</strong>
+                    <small>Sparziele planen und Wachstumsraten simulieren.</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./tools/waehrungsrechner/">
+                  <span class="icon" aria-hidden="true">🌍</span>
+                  <div>
+                    <strong>Währungsrechner</strong>
+                    <small>EZB-Wechselkurse mit 24&nbsp;h Aktualität.</small>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Beliebte Wissensartikel</h3>
+            <ul class="link-list">
+              <li>
+                <a href="./wissen/steckdosen-adapter/">
+                  <span class="icon" aria-hidden="true">🔌</span>
+                  <div>
+                    <strong>Steckdosen-Adapter nach Ländern</strong>
+                    <small>Alle Steckertypen im Überblick plus Reise-Tipps.</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./wissen/papierformate/">
+                  <span class="icon" aria-hidden="true">📄</span>
+                  <div>
+                    <strong>Papierformate DIN A0–A10</strong>
+                    <small>Maße, Umrechnungen und praktische Beispiele.</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./wissen/bildschirmaufloesungen/">
+                  <span class="icon" aria-hidden="true">🖥️</span>
+                  <div>
+                    <strong>Bildschirmauflösungen</strong>
+                    <small>Von HD bis 8K – welche Auflösung passt wofür?</small>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="./">Startseite</a>
+          <a href="./a-z/">Tools A–Z</a>
+          <a href="./wissen/">Wissen</a>
+          <a href="./quiz/allgemeinwissen/">Quiz</a>
+          <a href="./impressum/">Impressum</a>
+          <a href="./datenschutz/">Datenschutz</a>
+        </div>
+        <div class="footer-meta">© <span id="year"></span> Tech Teddy – Tools made in Germany.</div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import './assets/js/home.js';
+      const yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
