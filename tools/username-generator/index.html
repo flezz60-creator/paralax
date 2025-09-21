@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Usernamen-Generator – Tech Teddy</title>
+    <meta name="description" content="" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="canonical" href="https://tech-teddy.de/tools/username-generator/" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="../../">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="logo" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#1d4ed8" />
+                <stop offset="1" stop-color="#60a5fa" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#logo)" />
+            <path
+              d="M24 20a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4h4a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4h-4v4a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4v-4h-4a4 4 0 0 1-4-4V28a4 4 0 0 1 4-4h4zm4 6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2z"
+              fill="#f8fafc"
+            />
+          </svg>
+          <span>Tech Teddy</span>
+        </a>
+        <nav aria-label="Hauptnavigation">
+          <ul>
+            <li><a href="../../">Start</a></li>
+            <li><a href="../../a-z/">Tools A–Z</a></li>
+            <li><a href="../../wissen/">Wissen</a></li>
+            <li><a href="../../quiz/allgemeinwissen/">Quiz</a></li>
+            <li><a href="../../impressum/">Impressum</a></li>
+            <li><a href="../../datenschutz/">Datenschutz</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="theme-toggle" data-theme-toggle>🌙 Dunkelmodus</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="tool-shell" data-tool-shell>
+        <nav class="breadcrumbs" data-breadcrumbs></nav>
+        <header class="tool-header">
+          <h1 data-tool-title></h1>
+          <p class="tool-description" data-tool-description></p>
+          <div class="tool-meta" data-tool-meta></div>
+        </header>
+        <div class="inline-ad" data-ad-slot>Anzeige – Platzhalter</div>
+        <div data-tool-disclaimer></div>
+        <div class="tool-layout">
+          <section data-tool-interactive></section>
+          <aside>
+            <div data-tool-related></div>
+            <div class="sticky-sidebar-ad" data-ad-slot>Anzeige – Sidebar</div>
+          </aside>
+        </div>
+        <section data-tool-examples></section>
+        <section data-tool-faq></section>
+        <div class="tool-sharing" data-tool-sharing></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="../../">Startseite</a>
+          <a href="../../a-z/">Tools A–Z</a>
+          <a href="../../wissen/">Wissen</a>
+          <a href="../../quiz/allgemeinwissen/">Quiz</a>
+          <a href="../../impressum/">Impressum</a>
+          <a href="../../datenschutz/">Datenschutz</a>
+        </div>
+        <div class="footer-meta">© <span id="year"></span> Tech Teddy – Tools made in Germany.</div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import { renderToolPage } from '../../assets/js/tool-page.js';
+      const yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+      renderToolPage('username-generator');
+    </script>
+  </body>
+</html>

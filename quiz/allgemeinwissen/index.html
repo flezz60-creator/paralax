@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Allgemeinwissen – Tech Teddy</title>
+    <meta name="description" content="20 Fragen Allgemeinwissen zum direkten Durchklicken – ganz ohne Backend." />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="canonical" href="https://tech-teddy.de/quiz/allgemeinwissen/" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="../../">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="logo" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#1d4ed8" />
+                <stop offset="1" stop-color="#60a5fa" />
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#logo)" />
+            <path
+              d="M24 20a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4h4a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4h-4v4a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4v-4h-4a4 4 0 0 1-4-4V28a4 4 0 0 1 4-4h4zm4 6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2z"
+              fill="#f8fafc"
+            />
+          </svg>
+          <span>Tech Teddy</span>
+        </a>
+        <nav aria-label="Hauptnavigation">
+          <ul>
+            <li><a href="../../">Start</a></li>
+            <li><a href="../../a-z/">Tools A–Z</a></li>
+            <li><a href="../../wissen/">Wissen</a></li>
+            <li><a href="../../quiz/allgemeinwissen/" aria-current="page">Quiz</a></li>
+            <li><a href="../../impressum/">Impressum</a></li>
+            <li><a href="../../datenschutz/">Datenschutz</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="theme-toggle" data-theme-toggle>🌙 Dunkelmodus</button>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <h1>Quiz Allgemeinwissen</h1>
+      <p>20 Fragen, zufällige Reihenfolge. Keine externen Daten – alles läuft im Browser.</p>
+      <div class="tool-card" data-quiz></div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="../../">Startseite</a>
+          <a href="../../a-z/">Tools A–Z</a>
+          <a href="../../wissen/">Wissen</a>
+          <a href="../../quiz/allgemeinwissen/">Quiz</a>
+          <a href="../../impressum/">Impressum</a>
+          <a href="../../datenschutz/">Datenschutz</a>
+        </div>
+        <div class="footer-meta">© <span id="year"></span> Tech Teddy – Tools made in Germany.</div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import { setupThemeToggle, formatNumber } from '../../assets/js/utils.js';
+      const themeToggle = document.querySelector('[data-theme-toggle]');
+      setupThemeToggle(themeToggle);
+      const yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      const questions = [
+        { q: 'Welcher Planet ist der Sonne am nächsten?', a: 'Merkur' },
+        { q: 'Wie viele Bundesländer hat Deutschland?', a: '16' },
+        { q: 'Wer schrieb "Faust"?', a: 'Johann Wolfgang von Goethe' },
+        { q: 'Wie heißt die Hauptstadt von Australien?', a: 'Canberra' },
+        { q: 'Welches chemische Symbol besitzt Gold?', a: 'Au' },
+        { q: 'Wie viele Minuten hat ein Tag?', a: '1.440' },
+        { q: 'In welchem Jahr fiel die Berliner Mauer?', a: '1989' },
+        { q: 'Welcher Fluss fließt durch Paris?', a: 'Seine' },
+        { q: 'Wer malte die Mona Lisa?', a: 'Leonardo da Vinci' },
+        { q: 'Wie lautet die höchste Spielkarte im deutschen Skat?', a: 'Ass' },
+        { q: 'Welche Farbe erhält man aus Blau und Gelb?', a: 'Grün' },
+        { q: 'Welches Tier ist das größte Landraubtier?', a: 'Eisbär' },
+        { q: 'Wie heißt das kleinste Land der Welt?', a: 'Vatikanstadt' },
+        { q: 'Welches Element hat die Ordnungszahl 1?', a: 'Wasserstoff' },
+        { q: 'Wie viele Zähne hat ein erwachsener Mensch normalerweise?', a: '32' },
+        { q: 'Welche Sprache hat die meisten Muttersprachler?', a: 'Mandarin' },
+        { q: 'Wie viele Ringe hat die olympische Flagge?', a: '5' },
+        { q: 'Was ist die Hauptstadt von Kanada?', a: 'Ottawa' },
+        { q: 'Welcher Kontinent ist flächenmäßig der größte?', a: 'Asien' },
+        { q: 'Wie heißt das längste Gebirge der Welt?', a: 'Anden' },
+      ];
+
+      const container = document.querySelector('[data-quiz]');
+      const state = { index: 0, score: 0 };
+      const shuffled = [...questions].sort(() => Math.random() - 0.5);
+
+      function renderQuestion() {
+        if (!container) return;
+        container.innerHTML = '';
+        if (state.index >= shuffled.length) {
+          const result = document.createElement('div');
+          result.className = 'result-card';
+          const headline = document.createElement('h2');
+          headline.textContent = 'Ergebnis';
+          const value = document.createElement('div');
+          value.className = 'result-value';
+          value.textContent = `${state.score} / ${shuffled.length}`;
+          const percent = document.createElement('p');
+          percent.textContent = `Trefferquote: ${formatNumber((state.score / shuffled.length) * 100, { maximumFractionDigits: 0 })} %`;
+          const restart = document.createElement('button');
+          restart.className = 'btn btn-primary';
+          restart.type = 'button';
+          restart.textContent = 'Neu starten';
+          restart.addEventListener('click', () => {
+            state.index = 0;
+            state.score = 0;
+            shuffled.sort(() => Math.random() - 0.5);
+            renderQuestion();
+          });
+          result.appendChild(headline);
+          result.appendChild(value);
+          result.appendChild(percent);
+          result.appendChild(restart);
+          container.appendChild(result);
+          return;
+        }
+
+        const current = shuffled[state.index];
+        const question = document.createElement('h2');
+        question.textContent = `Frage ${state.index + 1}: ${current.q}`;
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = 'Deine Antwort';
+        input.autocomplete = 'off';
+        input.spellcheck = false;
+
+        const buttons = document.createElement('div');
+        buttons.className = 'tool-sharing';
+
+        const check = document.createElement('button');
+        check.type = 'button';
+        check.className = 'btn btn-primary';
+        check.textContent = 'Antwort prüfen';
+
+        const skip = document.createElement('button');
+        skip.type = 'button';
+        skip.className = 'btn btn-secondary';
+        skip.textContent = 'Überspringen';
+
+        const feedback = document.createElement('p');
+        feedback.className = 'meta';
+
+        check.addEventListener('click', () => {
+          const guess = input.value.trim().toLowerCase();
+          if (!guess) {
+            feedback.textContent = 'Bitte eine Antwort eingeben.';
+            return;
+          }
+          if (guess === current.a.toLowerCase()) {
+            feedback.textContent = 'Richtig!';
+            state.score += 1;
+          } else {
+            feedback.textContent = `Leider nein – korrekt: ${current.a}`;
+          }
+          state.index += 1;
+          setTimeout(renderQuestion, 900);
+        });
+
+        skip.addEventListener('click', () => {
+          state.index += 1;
+          renderQuestion();
+        });
+
+        buttons.appendChild(check);
+        buttons.appendChild(skip);
+
+        container.appendChild(question);
+        container.appendChild(input);
+        container.appendChild(buttons);
+        container.appendChild(feedback);
+        input.focus();
+      }
+
+      renderQuestion();
+    </script>
+  </body>
+</html>
